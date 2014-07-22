@@ -22,19 +22,19 @@ graylog2 alternative
 
 gelf -> logstash -> elasticsearch -> kibana
 
-### GELF
+### [GELF](http://graylog2.org/gelf)
 Graylog extended logging format
 JSON over UDP - nonblocking
 Not reliable
 allows chunking
 
-### Logstash
+### [Logstash](http://logstash.net)
 receiving, processing and outputting logs
 JRuby
 Pipes/filters pattern
 configure: inputs, filters and outputs
 
-### kibana
+### Kibana
 Utilises elastic search
 No auth
 single page JavaScript app
