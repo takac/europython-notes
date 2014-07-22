@@ -1,5 +1,6 @@
 Magic Access Attributes
 =======================
+Petr Viktorin
 [@encukou](https://twitter.com/encukou)
 [encukou.cz](https://encukou.cz)
 
