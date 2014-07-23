@@ -15,7 +15,7 @@ Also overwrite `__setattr__`
 
 Object also have `__doc__`, methods, subclasses etc.
 
-### Descriptors
+### [Descriptors](https://docs.python.org/2/howto/descriptor.html)
 
     class MyDescriptor
     def __get__(...)
