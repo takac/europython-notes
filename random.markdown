@@ -9,7 +9,7 @@ Impartial, does not use existing state
 [Mersenne Twister](http://en.wikipedia.org/wiki/Mersenne_twister)
 is pythons default algorithm
 
-[Fisher Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle) default shuffle algorithm
+[Fisher Yates shuffle](http://en.wikipedia.org/wiki/Fisher-Yates_shuffle) default shuffle algorithm
 
 Normal variates
 triangular dist
