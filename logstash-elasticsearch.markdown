@@ -4,6 +4,8 @@ Peter Hoffman
 [@peterhoffmann](https://twitter.com/peterhoffmann)
 [http://peter-hoffmann.com](http://peter-hoffmann.com)
 [Slides](github.com/hoffmann)
+[https://ep2014.europython.eu/en/schedule/sessions/47/](https://ep2014.europython.eu/en/schedule/sessions/47/)
+[https://www.youtube.com/watch?v=J3ai0cDOAkY](https://www.youtube.com/watch?v=J3ai0cDOAkY)
 
 graylog2 alternative
 

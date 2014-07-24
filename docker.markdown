@@ -1,9 +1,10 @@
 Docker Development
 ==================
-
 Deni Bertovic  
 [@denibertovic](https://twitter.com/denibertovic)
 [https://githbub.com/denibertovic](https://githbub.com/denibertovic)
+[https://ep2014.europython.eu/en/schedule/sessions/30/](https://ep2014.europython.eu/en/schedule/sessions/30/)
+[https://www.youtube.com/watch?v=-l9xH1X_rvg](https://www.youtube.com/watch?v=-l9xH1X_rvg)
 
 ### Docker
 Light weight containers

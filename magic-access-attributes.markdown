@@ -3,6 +3,8 @@ Magic Access Attributes
 Petr Viktorin
 [@encukou](https://twitter.com/encukou)
 [encukou.cz](https://encukou.cz)
+[https://ep2014.europython.eu/en/schedule/sessions/123/](https://ep2014.europython.eu/en/schedule/sessions/123/)
+[https://www.youtube.com/watch?v=y420yZMRdLw](https://www.youtube.com/watch?v=y420yZMRdLw)
 
 Order an attribute is looked up:
 - Check `__dict__`

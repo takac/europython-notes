@@ -1,6 +1,8 @@
 ZeroMQ
 ======
-Pieter Hintjens
+Pieter Hintjens  
+[https://ep2014.europython.eu/en/schedule/sessions/122/](https://ep2014.europython.eu/en/schedule/sessions/122/)  
+[https://www.youtube.com/watch?v=36bKE_JsHZs](https://www.youtube.com/watch?v=36bKE_JsHZs)
 
 Scaling
 Lack of control in distributed systems
@@ -9,5 +11,10 @@ Reliability at 99.99%
 Dealer Router
 Round robin
 Router server socket
+Pipelines
+Message acknowledgement
+Messages will always be lost somewhere
 
-choose a city
+Allow any sane pull requests
+Quickly fix any issues from bad pulls
+Prevent bottle necks, split work

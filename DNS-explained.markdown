@@ -3,6 +3,9 @@ DNS Explained
 Lynn Root
 [@roguelynn](https://twitter.com/roguelynn)
 [rogue.ly/dns](rogue.ly/dns)
+[https://ep2014.europython.eu/en/schedule/sessions/5/](https://ep2014.europython.eu/en/schedule/sessions/5/)
+[https://www.youtube.com/watch?v=ZqKNDn56Aoo](https://www.youtube.com/watch?v=ZqKNDn56Aoo)
+[https://speakerdeck.com/roguelynn/europython-2014-for-lack-of-a-better-name-server-dns-explained](https://speakerdeck.com/roguelynn/europython-2014-for-lack-of-a-better-name-server-dns-explained)
 
 Distibutd storage for reosurce records
 Record: lable, class, type and data

@@ -1,6 +1,9 @@
 Python Random
 =============
 Jair Trejo
+[https://ep2014.europython.eu/en/schedule/sessions/13/](https://ep2014.europython.eu/en/schedule/sessions/13/)
+[Slides](https://speakerdeck.com/jairtrejo/non-sequitur-an-exploration-of-pythons-random-module)
+[https://www.youtube.com/watch?v=cQg4GC-TFG8](https://www.youtube.com/watch?v=cQg4GC-TFG8)
 
 
 Newtons letters first exploration of random

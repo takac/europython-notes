@@ -2,6 +2,8 @@ Apache Storm and Apache Kafka
 =============================
 Konark Modi
 [@konarkmodi](https://twitter.com/konarkmodi)
+[https://ep2014.europython.eu/en/schedule/sessions/111/](https://ep2014.europython.eu/en/schedule/sessions/111/)
+[https://www.youtube.com/watch?v=uwiHZru2Wjc](https://www.youtube.com/watch?v=uwiHZru2Wjc)
 
 StreamParse python
 Petrel - Pure python storm
