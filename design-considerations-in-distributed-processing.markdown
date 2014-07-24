@@ -1,4 +1,4 @@
-design-considerations-in-distributed-processing
+Design Considerations in Distributed Processing
 ===============================================
 
 Konark Modi

@@ -1,16 +1,18 @@
 #! /bin/bash
 
-> index.markdown
+INDEX='README'
+
+> README.markdown
 for FILE in *.markdown; do
-    if [ "${FILE}" == 'index.markdown' ]; then
+    if [ "${FILE}" == "${INDEX}.markdown" ]; then
         continue
     fi
     # Compile markdown
     BARE=${FILE%%.*}
     HTML=${BARE}.html
     markdown ${FILE} > ${HTML}
-    cat >> index.markdown <<< "[$(head -n1 ${FILE})](${HTML})  "
+    cat >> ${INDEX}.markdown <<< "[$(head -n1 ${FILE})](${HTML})  "
 done
 
-markdown index.markdown > index.html
+markdown ${INDEX}.markdown > ${INDEX}.html
 
