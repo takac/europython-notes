@@ -2,8 +2,8 @@ OpenStack - Marconi
 ===================
 Yeela Kaplan
 Redhat
-[https://ep2014.europython.eu/en/schedule/sessions/14/](https://ep2014.europython.eu/en/schedule/sessions/14/)
-[https://www.youtube.com/watch?v=d65TtqGp-9Q](https://www.youtube.com/watch?v=d65TtqGp-9Q)
+[Europython Page](https://ep2014.europython.eu/en/schedule/sessions/14/)
+[Talk Recording](https://www.youtube.com/watch?v=d65TtqGp-9Q)
 
 Message Broker
 Unified inter service communication

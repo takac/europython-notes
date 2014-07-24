@@ -3,8 +3,8 @@ Intro to pytest
 Andreas Pelme  
 [@andreaspelme](https://twitter.com/andreaspelme)  
 [speakerdeck.com/pelme](speakerdeck.com/pelme)  
-[https://ep2014.europython.eu/en/schedule/sessions/100/](https://ep2014.europython.eu/en/schedule/sessions/100/)  
-[https://www.youtube.com/watch?v=LdVJj65ikRY](https://www.youtube.com/watch?v=LdVJj65ikRY)  
+[Europython Page](https://ep2014.europython.eu/en/schedule/sessions/100/)  
+[Talk Recording](https://www.youtube.com/watch?v=LdVJj65ikRY)
 
 py.test runs python unittest tests
 

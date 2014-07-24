@@ -3,8 +3,8 @@ Docker Development
 Deni Bertovic  
 [@denibertovic](https://twitter.com/denibertovic)
 [https://githbub.com/denibertovic](https://githbub.com/denibertovic)
-[https://ep2014.europython.eu/en/schedule/sessions/30/](https://ep2014.europython.eu/en/schedule/sessions/30/)
-[https://www.youtube.com/watch?v=-l9xH1X_rvg](https://www.youtube.com/watch?v=-l9xH1X_rvg)
+[Europython Page](https://ep2014.europython.eu/en/schedule/sessions/30/)
+[Talk Recording](https://www.youtube.com/watch?v=-l9xH1X_rvg)
 
 ### Docker
 Light weight containers
@@ -26,7 +26,7 @@ List images running
 
 Tag an image, can then push it
 
-    docker t 
+    docker tag 
 
 Docker files to build the image.
 

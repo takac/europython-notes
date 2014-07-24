@@ -1,8 +1,8 @@
 ZeroMQ
 ======
 Pieter Hintjens  
-[https://ep2014.europython.eu/en/schedule/sessions/122/](https://ep2014.europython.eu/en/schedule/sessions/122/)  
-[https://www.youtube.com/watch?v=36bKE_JsHZs](https://www.youtube.com/watch?v=36bKE_JsHZs)
+[Europython Page](https://ep2014.europython.eu/en/schedule/sessions/122/)  
+[Talk Recording](https://www.youtube.com/watch?v=36bKE_JsHZs)
 
 Scaling
 Lack of control in distributed systems
