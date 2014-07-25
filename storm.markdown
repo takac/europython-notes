@@ -23,9 +23,10 @@ Java but with python libraries
 - Samsa
 
 Storm
-- Realtime computation system- Spouts, producers
+- Realtime computation system
+- Spouts, producers
 - Bolts, processors
 - DRPC
-- Transactional topologies, intergrity of processing. Will procss message once only.
+- Transactional topologies, integrity of processing. Will process message once only.
 - Trident topologies
 - Clojure DSL
