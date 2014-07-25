@@ -7,6 +7,7 @@ Pieter Hintjens
 Scaling
 Lack of control in distributed systems
 Reliability at 99.99%
+Writing protocols and contracts for development against
 
 Dealer Router
 Round robin
