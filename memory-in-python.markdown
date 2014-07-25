@@ -3,15 +3,15 @@ Everything you wanted to know about memory in Python
 Piotr Przymus
 [Europython](https://ep2014.europython.eu/en/schedule/sessions/28/)
 
-Types   32bit   64bit
-int     12      24
-long    14      30
-    +2 bytes for each digit
-float   16      24
-complex 24      32
-str     24      40
-    +2 bytes for length
-unicode
+    Types   32bit   64bit
+    int     12      24
+    long    14      30
+        +2 bytes for each digit
+    float   16      24
+    complex 24      32
+    str     24      40
+        +2 bytes for length
+    unicode
 
 Call to check size
 
@@ -40,7 +40,7 @@ Good strategies will slightly over allocate memory needed
 Occasionally shrink for over allocated memory
 Cheap to add at end of arrays, expensive to put in middle
 
-Dictionarys and Sets
+Dictionary's and Sets
 2/3 cap overallocation
 if elements < 50000, quadruple cap
 
@@ -48,7 +48,7 @@ Memory allocation
 best memory allocation for new classes with slots, listadata, tupledata, namedtule, 
 
 python GC
-Referencing counting with cycle dectecton
+Referencing counting with cycle detection
 overloading `__del__()` can be dangerous 
 
 psutil - inspecing sys utils
@@ -83,8 +83,19 @@ Heapy - used to find info about the objects in the heap
 runsnakerun
 
 Malloc alternatives, libjemalloc, libtcmalloc
-
-procs- in some cases using different malloc impls may help to retrieve mem
+Pros- in some cases using different malloc impls may help to retrieve mem
 from Cpthon back to system but may work against you
+
+build pythonin debug mode --with-pydebug
+
+valgrind - memory debugger
+
+gdb-heap (low level)
+
+dowser - cherrypy
+
+delegate mem intensive tasks to other processes
+Regularly restart processes
+go for low hanging fruit like `__slots__`
 
 
