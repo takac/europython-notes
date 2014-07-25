@@ -38,7 +38,7 @@ network clients and servers, and other related primitives.
 
 
 ### Summary
-Asyncio eco system is young
-coroutines and futures are better than callbacks
-documentation is lacking
-Graphite good for timesieres
+- Asyncio eco system is young
+- coroutines and futures are better than callbacks
+- documentation is lacking
+- Graphite good for timesieres
