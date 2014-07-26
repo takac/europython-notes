@@ -1,34 +1,65 @@
 import urllib3
+import functools
 from bs4 import BeautifulSoup
 
-http = urllib3.PoolManager()
 
-baseurl = "http://ep2014.europython.eu"
-sched = "/en/schedule/sessions/14/"
-
-def talk_from_path(url):
-    resp = http.request('GET', baseurl + url)
-    return TalkPageParser(resp.data)
-
-# soup = BeautifulSoup(resp.data)
-
-# Doesn't work for kwargs
-def memprop(func):
+def memoize(func):
     cache = {}
+    @functools.wraps(func)
     def f(*args, **kwargs):
-        if args not in cache:
-            cache[args] = func(*args, **kwargs)
-        return cache[args]
-    return property(f)
-
-# class AuthorPageParser(object):
-#     def __init__(self, content):
-#         self.soup = BeautifulSoup(content)
+        key = (args, frozenset(kwargs.items()))
+        if key not in cache:
+            cache[key] = func(*args, **kwargs)
+        return cache[key]
+    return f
 
 
-class TalkPageParser(object):
-    def __init__(self, content):
+def clean_text(func):
+    @functools.wraps(func)
+    def f(*args, **kwargs):
+        return func(*args, **kwargs).strip().encode('utf-8')
+    return f
+
+
+def memprop(func):
+    '''Memoized property field decorator.'''
+    return property(memoize(func))
+
+
+http = urllib3.PoolManager()
+@memoize
+def get_euro_python_page(relative_url, base_url="http://ep2014.europython.eu"):
+    yield http.request('GET', base_url + relative_url).data
+
+class PageParser(object):
+    def __init__(self, content_gen=None, content=None, url=None, soup=None):
+        self.url = url
+        self.content = content
+        self._soup = soup
+        self.content_gen = content_gen
+
+    @property
+    def soup(self):
+        if self.content is None:
+            self.content = next(self.content_gen)
+        if self._soup is None:
+            self._soup =  BeautifulSoup(self.content)
+        return self._soup
+
+class AuthorPageParser(object):
+    def __init__(self, content, url):
         self.soup = BeautifulSoup(content)
+
+
+class TalkPageParser(PageParser):
+
+    @staticmethod
+    def talk_from_url(url):
+        return TalkPageParser(content_gen=get_euro_python_page(url), url=url)
+
+    @staticmethod
+    def talk_from_file(filename):
+        return TalkPageParser(content=open(filename, 'r'))
 
     @memprop
     def details(self):
@@ -51,27 +82,30 @@ class TalkPageParser(object):
 
     @memprop
     def title(self):
-        return self.soup.find('h1', {'id': 'site-title'}).text
+        return self.soup.find('h1', {'id': 'site-title'}).text.strip().encode('utf-8')
 
     @memprop
+    @clean_text
     def abstract(self):
-        return self.details.find('div', {'class': 'abstract'}).text.strip()
+        return self.details.find('div', {'class': 'abstract'}).text
 
     @memprop
     def when(self):
-        return self.details.findAll('dd')[2].text.strip()
+        return self.details.findAll('dd')[2].text.strip().encode('utf-8')
 
     @memprop
     def where(self):
-        return self.details.findAll('dd')[1].text.strip()
+        return self.details.findAll('dd')[1].text.strip().encode('utf-8')
 
     @memprop
     def speakerdeck(self):
         return self.soup.find('script', {'class': 'speakerdeck-embed'})
 
-talk = TalkPageParser(open('speakerdump.txt', 'r').read())
-
+sched = "/en/schedule/sessions/14/"
+print "=" * 40
+talk = TalkPageParser.talk_from_url(sched)
 props = [ i for i in dir(talk) if not i.startswith('_') ]
+props.remove('content')
 props.remove('details')
 props.remove('soup')
 for i in props:
