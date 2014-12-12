@@ -46,20 +46,35 @@ class PageParser(object):
             self._soup =  BeautifulSoup(self.content)
         return self._soup
 
-class AuthorPageParser(object):
-    def __init__(self, content, url):
-        self.soup = BeautifulSoup(content)
+    @classmethod
+    def talk_from_url(cls, url):
+        return cls(content_gen=get_euro_python_page(url), url=url)
+
+    @classmethod
+    def talk_from_file(cls, filename):
+        return cls(content=open(filename, 'r'))
+
+
+class AuthorPageParser(PageParser):
+
+    @memprop
+    def info(self):
+        return self.soup.find('p', {'class': 'infoline'})
+
+    @memprop
+    def website(self):
+        return self.info.find('i', {'class': 'fa-link'}).parent['href']
+
+    @memprop
+    def twitter(self):
+        return self.info.find('i', {'class': 'fa-twitter'}).parent['href']
+
+    @memprop
+    def office(self):
+        return self.info.find('i', {'class': 'fa-building-o'}).parent.text.strip()
 
 
 class TalkPageParser(PageParser):
-
-    @staticmethod
-    def talk_from_url(url):
-        return TalkPageParser(content_gen=get_euro_python_page(url), url=url)
-
-    @staticmethod
-    def talk_from_file(filename):
-        return TalkPageParser(content=open(filename, 'r'))
 
     @memprop
     def details(self):
